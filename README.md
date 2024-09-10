@@ -99,10 +99,10 @@ We provide [raw results](https://huggingface.co/datasets/kxic/EscherNet-Results)
 ##### [GSO Google Scanned Objects](https://app.gazebosim.org/GoogleResearch/fuel/collections/Scanned%20Objects%20by%20Google%20Research)
 [GSO30](https://huggingface.co/datasets/kxic/EscherNet-Dataset/tree/main): We select 30 objects from GSO dataset and render 25 randomly sampled novel views for each object for both NVS and 3D reconstruction evaluation.
 
-##### [RTMV](https://drive.google.com/drive/folders/1cUXxUp6g25WwzHnm_491zNJJ4T7R_fum)
-We use the 10 scenes from `google_scanned.tar` under folder `40_scenes` for NVS evaluation.
+##### [RTMV](https://huggingface.co/datasets/kxic/EscherNet-Dataset/tree/main)
+We use the 10 scenes from [google_scanned.tar](https://drive.google.com/drive/folders/1cUXxUp6g25WwzHnm_491zNJJ4T7R_fum) under folder `40_scenes` for NVS evaluation.
 
-##### [NeRF_Synthetic](https://drive.google.com/drive/folders/1JDdLGDruGNXWnM1eqY1FNL9PlStjaKWi)
+##### [NeRF_Synthetic](https://huggingface.co/datasets/kxic/EscherNet-Dataset/tree/main)
 We use the all 8 NeRF objects for 2D NVS evaluation.
 
 ##### [Franka16](https://huggingface.co/datasets/kxic/EscherNet-Dataset/tree/main)
