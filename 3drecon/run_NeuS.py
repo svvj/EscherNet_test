@@ -3,8 +3,8 @@ import numpy as np
 from tqdm import tqdm
 
 # ours + NeuS
-DATA_DIR = "/home/xin/data/EscherNet/Data/GSO30"   # GSO
-exp_dir = "/home/xin/6DoF/GSO3D/"
+DATA_DIR = "../logs_6DoF/NeRF"   # GSO
+exp_dir = "../logs_6DoF/NeRF/NeuS"
 
 config = "configs/neus_36.yaml"
 exps = [1]

@@ -148,3 +148,9 @@ wandb
 
 # pretrained models
 pretrained
+
+# data
+demo
+logs_4DoF
+logs_6DoF
+removed
