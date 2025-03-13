@@ -21,9 +21,9 @@ pretrained_model="kxic/eschernet-6dof"
 #data_dir="./demo/GSO30"
 
 ## GSO
-#data_type="GSO25" # GSO25, GSO3D, GSO100, NeRF, RTMV
-#T_ins=(1 2 3 5 10)
-#data_dir="./demo/data/EscherNet/Data/GSO30/"
+# data_type="GSO25" # GSO25, GSO3D, GSO100, NeRF, RTMV
+# T_ins=(1 2 3 5 10)
+# data_dir="./demo/GSO30/"
 
 ## RTMV
 #data_type="RTMV"
@@ -33,13 +33,12 @@ pretrained_model="kxic/eschernet-6dof"
 ## NeRF
 # data_type="NeRF"
 # #T_ins=(1 2 3 5 10 20 50 100)
-# T_ins=(50 100 200)
+# T_ins=(1)
 # data_dir="./demo/nerf_synthetic"
 
 ## NeRF_ours
 data_type="NeRF_ours"
-T_ins=(4 5 6 7 8 9 10)
-
+T_ins=$1
 data_dir="./demo/genAI_selected_poses"
 
 ## Real World Franka Recordings

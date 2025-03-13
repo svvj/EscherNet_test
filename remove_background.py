@@ -2,6 +2,7 @@ import os
 from PIL import Image
 import numpy as np
 import torch
+import cv2
 
 class BackgroundRemoval:
     def __init__(self, device='cuda'):
@@ -37,17 +38,31 @@ if __name__ == '__main__':
     
     # remove background from images
     image_dir = args.image_path
-    image_list = os.listdir(image_dir)
+    print("Input path:", image_dir)
+
+    split = {'chair', 'drums', 'ficus', 'hotdog', 'lego', 'materials', 'mic', 'ship'}
+    object_list = os.listdir(image_dir)
+    print(f"{len(object_list)} objects are found")
     if os.path.exists(args.save_path) == False:
         os.makedirs(args.save_path)
 
-    for image_path in image_list:
-        if image_path.endswith('.png') == False:
-            continue
-        background_removal = BackgroundRemoval()
-        image = np.array(Image.open(os.path.join(image_dir, image_path)))
-        image = background_removal(image)
-        Image.fromarray(image).save(os.path.join(args.save_path, image_path))
+    for object in object_list:
+        print(f"Object: {object}")
+        save_path = os.path.join(args.save_path, object)
+        if os.path.exists(save_path) == False:
+            os.makedirs(save_path)
+
+        image_list = os.listdir(os.path.join(image_dir, object))
+        for image_path in image_list:
+            if image_path.endswith('.png') == False:
+                print(f"{image_path} is passed")
+                continue
+            background_removal = BackgroundRemoval()
+            image = np.array(Image.open(os.path.join(image_dir, object, image_path)))
+            image = cv2.resize(image, (800, 800), interpolation=cv2.INTER_CUBIC)
+            image = background_removal(image)
+            Image.fromarray(image).save(os.path.join(save_path, image_path))
+            print(f"Image is saved in {os.path.join(save_path, image_path)}")
     # background_removal = BackgroundRemoval()
     # image = np.array(Image.open(args.image_path))
     # image = background_removal(image)
