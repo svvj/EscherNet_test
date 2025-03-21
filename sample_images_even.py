@@ -8,7 +8,7 @@ import cv2
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', '--ref_image_path', type=str, required=True)  # demo/genAI_selected_poses/
+    parser.add_argument('-i', '--cap_image_path', type=str, required=True)  # demo/genAI_selected_poses/
     parser.add_argument('-g', '--gen_image_path', type=str, required=True)  # removal/NeRF_ours/removed
     parser.add_argument('-n', '--save_path', type=str, required=True)       # sampled
     args = parser.parse_args()
@@ -21,7 +21,7 @@ if __name__ == '__main__':
         os.makedirs(args.save_path)
 
     for object in objects:
-        object_path = os.path.join(args.ref_image_path, object)   # demo/genAI_selected_poses/chair
+        object_path = os.path.join(args.cap_image_path, object)   # demo/genAI_selected_poses/chair
         print(f"Object: {object_path}")
 
 

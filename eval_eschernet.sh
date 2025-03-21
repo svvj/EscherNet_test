@@ -39,7 +39,7 @@ pretrained_model="kxic/eschernet-6dof"
 ## NeRF_ours
 data_type="NeRF_ours"
 T_ins=$1
-data_dir="./demo/genAI_selected_poses"
+data_dir="./demo/evenly_selected_poses"
 
 ## Real World Franka Recordings
 #data_type="Franka"
